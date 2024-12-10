@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Your Hope</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/hope">Write Hope</a>
+        <a href="/list_hope">List of Hopes</a>
+    </div>
+    <div class="main-content">
+        <h1>Write Your Hope</h1>
+        <form action="/hope" method="POST">
+            <label for="hope">Your Hope:</label>
+            <textarea name="hope" id="hope" rows="4" required></textarea><br><br>
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" required><br><br>
+            <label for="date">Send On (YYYY-MM-DD):</label>
+            <input type="date" name="date" required><br><br>
+            <button type="submit">Submit Hope</button>
+        </form>
+    </div>
+</body>
+</html>
